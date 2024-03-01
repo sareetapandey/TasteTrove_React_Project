@@ -1,0 +1,48 @@
+export const alpha = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
+export const auth = [
+  {
+    name: "sarita",
+    contact: "9867320176",
+    email: "isaritapande71@gmail.com",
+    id: 1,
+    token: "/826382369862s/dkjfcsbjhskfjks",
+    type: "user",
+  },
+];
+export const Admin = [
+  {
+    name: "sarita",
+    contact: "9867320176",
+    email: "isaritapande71@gmail.com",
+    id: 1,
+    token: "/826382369862s/dkjfcsbjhskfjks",
+    type: "admin",
+  },
+];

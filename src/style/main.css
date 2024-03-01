@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova&display=swap');
+*{
+padding: 0;
+margin: 0;
+font-family: 'Bona Nova', sans-serif;
+
+}
+body {
+    background-color: #fcde67;
+    
+  }
+.main{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.heading h1{
+color: #030e12;
+font-size: 48px;
+font-weight: 900;
+letter-spacing: 1px;
+padding-top: 2rem;
+margin: 1rem;
+
+}
+.search-bar{
+  margin: 1rem 0;
+  width: 500px;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  padding: 0.3rem 1rem;
+  color: #030e12;
+}
+.container{
+  width: 80%;
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 2rem;
+}
+.card{
+  width: 180px;
+  border-radius: 1rem;
+  background-color: #030e12;
+  padding: 5px;
+  
+}
+img{
+  width: 100%;
+  border-radius: 1rem 1rem 0 0 ;
+
+}
+.card h3{
+  color: white;
+  font-size: 18px;
+}
+.indexContainer{
+display: flex;
+margin: 2.5rem 0;
+}
+.numBox{
+  width: 50px;
+  height: 40px;
+  display: flex;
+  background-color: #030e12;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0 5px 0 5px;
+}
+.backgroundauth {
+  background-image: url(../component/images/tree.jpg);
+  background-color: #cccccc;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+
+
+.bg-image{
+  position: relative;
+  background: linear-gradient(rgba(8,8,8,0.3), rgba(8,8,8,0.3)), url('https://thumbs.dreamstime.com/b/wooden-table-food-top-view-cafe-102532611.jpg');
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.text-content{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header-title{
+  text-transform: uppercase;
+  letter-spacing: 16px;
+  color: #fff;
+  font-size: 70px;
+  margin-bottom: 32px;
+  
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+
+.logo {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-family: 'Roboto', sans-serif; /* Example font family */
+  font-size: 24px; /* Example font size */
+  color: #333; /* Example text color */
+}
+.logo:hover {
+  animation: bounce 2s;
+  transform-origin: center; /* ensure the menu item bounces from the center */
+}
+.uploadContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Ensure the button stays above other elements */
+}
+
+/* Styles for the button */
+.uploadButton {
+  font-weight: bold; 
+  font-size: 1.3em;
+}
+
+.uploadButton:hover {
+  background-color: #40a9ff; /* Darker shade of primary color on hover */
+}
+
+
+
+.menu-item {
+  color: #212529; /* dark text color */
+  margin-right: 20px; /* add space between menu items */
+}
+
+.menu-item:hover {
+  color: #ff6347; /* Change to your desired color */
+}
+.bookmark-button {
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: #ff6347;
+  border-color: #ff6347;
+}
+
+.bookmark-button:hover {
+  background-color: #ff6347d6;
+  border-color: #ff6347d6;
+}

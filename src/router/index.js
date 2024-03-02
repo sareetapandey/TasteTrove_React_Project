@@ -20,8 +20,9 @@ export const Routers = createBrowserRouter(
     <>
       <Route>
         <Route path="/" element={<Home />} />
+        <Route path="/upload" element={<UploadRecipeForm />} />
         <Route path="/navbar" element={<NavBar />} />
-        <Route path="/upload" exact component={UploadRecipeForm} />
+
         <Route path="/meal" element={<Meal />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

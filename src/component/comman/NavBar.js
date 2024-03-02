@@ -17,9 +17,10 @@ const NavBar = () => {
   useEffect(() => {
     const savedRecipes = JSON.parse(localStorage.getItem("savedRecipes")) || [];
     setBookmarkedItems(savedRecipes);
+    setIsLoggedIn(localStorage.getItem("token") !== null);
   }, []);
   const handleUpload = () => {
-    if (!isLoggedIn) {
+    if (!localStorage.getItem("token")) {
       // Show notification or error message
       notification.warning({
         message: "Please Log In or Sign Up",
@@ -35,6 +36,12 @@ const NavBar = () => {
 
     // Navigate to the UploadRecipeForm page
     navigate("/upload");
+  };
+  const handleLogout = () => {
+    // Perform logout logic here
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+    navigate("/");
   };
 
   return (
@@ -79,7 +86,7 @@ const NavBar = () => {
           <Dropdown
             icon="bookmark"
             className="icon"
-            style={{ fontWeight: "bold", fontSize: "1.4em", color: "black" }}
+            style={{ fontWeight: "bold", fontSize: "1.4em" }}
           >
             <Dropdown.Menu>
               {bookmarkedItems.length === 0 ? (
@@ -93,21 +100,36 @@ const NavBar = () => {
               )}
             </Dropdown.Menu>
           </Dropdown>
-          <Link
-            to="/login"
-            onLogin={handleLogin}
-            className="menu-item"
-            style={{ fontWeight: "bold", fontSize: "1.4em" }}
-          >
-            Login
-          </Link>
-          <Link
-            to="/signup"
-            className="menu-item"
-            style={{ fontWeight: "bold", fontSize: "1.4em" }}
-          >
-            Signup
-          </Link>
+
+          {isLoggedIn ? (
+            <Dropdown
+              text="sarita"
+              className="menu-item"
+              style={{ fontWeight: "bold", fontSize: "1.4em" }}
+            >
+              <Dropdown.Menu>
+                <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                onLogin={handleLogin}
+                className="menu-item"
+                style={{ fontWeight: "bold", fontSize: "1.4em" }}
+              >
+                Login
+              </Link>
+              <Link
+                to="/signup"
+                className="menu-item"
+                style={{ fontWeight: "bold", fontSize: "1.4em" }}
+              >
+                Signup
+              </Link>
+            </>
+          )}
         </Menu.Item>
       </Menu>
 

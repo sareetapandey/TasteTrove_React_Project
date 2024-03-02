@@ -38,8 +38,7 @@ const UploadRecipeForm = () => {
   return (
     <div
       style={{
-        backgroundImage:
-          "url(https://media-cdn.tripadvisor.com/media/photo-p/1b/e6/f4/6b/the-foodie-works-dishes.jpg)",
+        backgroundImage: "url(https://static.toiimg.com/photo/79828148.cms)",
         opacity: "90%",
       }}
     >
